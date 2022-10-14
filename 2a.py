@@ -8,14 +8,15 @@ for linha in linhas:
 
     letraNecessariaDaSenha = campos[1][0]
     senha = campos[2]
-    intervalo = list(map(int, campos[0].split('-')))
+    intervalo = campos[0].split('-')
+    intervalo = list(map(int, intervalo))
 
     numeroDeOcorrencias = senha.count(letraNecessariaDaSenha)
 
-    limiteInferior = intervalo[0]
-    limiteSuperior = intervalo[1]
+    indiceInferior = intervalo[0]
+    indiceSuperior = intervalo[1]
 
-    if limiteInferior <= numeroDeOcorrencias <= limiteSuperior:
+    if (senha[indiceInferior-1] == letraNecessariaDaSenha) ^ (senha[indiceSuperior-1] == letraNecessariaDaSenha):
         numeroDeSenhasValidas += 1
 
 print(numeroDeSenhasValidas)
