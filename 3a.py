@@ -17,7 +17,7 @@ def numeroDeArvoresQuandoSeDesceNoAngulo(angulo):
 with open('3input.txt') as file:
     mapa = file.read().splitlines()
 
-angulos = ((1, 1), (3, 1), (5, 1), (7, 1), (1, 2),)
+angulos = ((1, 1), (3, 1), (5, 1), (7, 1), (1, 2))
 multiplicacaoDoNumeroDeCadaAngulo = 1
 
 for angulo in angulos:
